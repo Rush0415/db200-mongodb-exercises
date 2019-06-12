@@ -20,10 +20,10 @@ describe('Mongo Exercises collection', function main() {
     });
   });
 
-  it('should be able to find documents in movie collection ', (done) => {
+  it('should be able to find documents in movies collection ', (done) => {
     MongoClient.connect(url, (err, db) => {
       expect(err).to.equal(null);
-      let collection = db.collection('movies');
+      let collection = db.collection('movie');
       collection.find({}).toArray((err, docs) => {
         expect(err).to.equal(null);
         expect(docs.length).to.be.greaterThan(0);
